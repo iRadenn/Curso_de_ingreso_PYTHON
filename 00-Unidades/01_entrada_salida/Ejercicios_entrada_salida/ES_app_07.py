@@ -49,42 +49,42 @@ class App(customtkinter.CTk):
         self.btn_dividir.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_sumar_on_click(self):
-        Num1 = int(self.txt_operador_a.get())
-        Num2 = int(self.txt_operador_b.get())
+        num1 = int(self.txt_operador_a.get())
+        num2 = int(self.txt_operador_b.get())
 
-        suma = Num1 + Num2
+        suma = num1 + num2
 
-        alert("Resultado", "El resultado de la suma es " + str(suma))
+        alert("Resultado", "El resultado de la suma es " .format(suma))
 
         pass
 
     def btn_restar_on_click(self):
-        Num1 = int(self.txt_operador_a.get())
-        Num2 = int(self.txt_operador_b.get())
+        num1 = int(self.txt_operador_a.get())
+        num2 = int(self.txt_operador_b.get())
 
-        resta = Num1 - Num2
+        resta = num1 - num2
 
-        alert("Resultado", "El resultado de la resta es {0}".format(str(resta)))
+        alert("Resultado", "El resultado de la resta es {0}".format(resta))
 
         pass
 
     def btn_multiplicar_on_click(self):
-        Num1 = int(self.txt_operador_a.get())
-        Num2 = int(self.txt_operador_b.get())
+        num1 = int(self.txt_operador_a.get())
+        num2 = int(self.txt_operador_b.get())
 
-        multiplicar = Num1 * Num2
+        multiplicar = num1 * num2
 
-        alert("Resultado", "El resultado de la multiplicacion es {0}".format(str(multiplicar)))
+        alert("Resultado", "El resultado de la multiplicacion es {0}".format(multiplicar))
 
         pass
 
     def btn_dividir_on_click(self):
-        Num1 = int(self.txt_operador_a.get())
-        Num2 = int(self.txt_operador_b.get())
+        num1 = int(self.txt_operador_a.get())
+        num2 = int(self.txt_operador_b.get())
 
-        dividir = Num1 / Num2
+        dividir = num1 / num2
 
-        alert("Resultado", "El resultado de la division es {0}".format(str(dividir)))
+        alert("Resultado", "El resultado de la division es {0}".format(dividir))
 
         pass
         

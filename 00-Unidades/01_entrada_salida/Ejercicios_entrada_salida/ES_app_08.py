@@ -41,12 +41,12 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        Num1 = int(self.txt_operador_a.get())
-        Num2 = int(self.txt_operador_b.get())
+        num1 = int(self.txt_operador_a.get())
+        num2 = int(self.txt_operador_b.get())
 
-        division = Num1 % Num2
+        division = num1 % num2
 
-        alert("Resultado","El resto de dividir {0} por {1} es: {2}".format(Num1,Num2,division))
+        alert("Resultado","El resto de dividir {0} por {1} es: {2}".format(num1,num2,division))
 
         pass
         
