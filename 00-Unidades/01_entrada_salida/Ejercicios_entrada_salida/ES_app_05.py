@@ -42,8 +42,9 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         Nombre = self.txt_nombre.get()
         Edad = self.txt_edad.get()
+        
 
-        alert("Resultado" , "Usted se llama " + Nombre + " y su edad es " + Edad + " Años")
+        alert("Resultado" , "Usted se llama {0} y su edad es {1}" .format(Nombre,Edad))
         pass
 
         
