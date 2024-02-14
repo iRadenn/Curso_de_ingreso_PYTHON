@@ -5,8 +5,8 @@ from tkinter.simpledialog import askstring as prompt
 import customtkinter
 
 '''
-nombre:
-apellido:
+nombre: Ignacio
+apellido: Orellana
 ---
 TP: ES_Facturaciones
 ---
@@ -52,12 +52,39 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
+        producto1 = float(self.txt_importe_1.get())
+        producto2 = float(self.txt_importe_2.get())
+        producto3 = float(self.txt_importe_3.get())
+
+        total = producto1 + producto2 + producto3
+
+        alert("Resultado", "La suma entre {0}, {1}, {2} nos da un total de: {3}".format(producto1, producto2, producto3, total))
         pass
 
     def btn_promedio_on_click(self):
+        producto1 = float(self.txt_importe_1.get())
+        producto2 = float(self.txt_importe_2.get())
+        producto3 = float(self.txt_importe_3.get())
+
+        total = producto1 + producto2 + producto3
+
+        promedio = total/3
+
+        alert("Resultado", "El promedio entre {0}, {1}, {2} nos da un total de: {3}".format(producto1, producto2, producto3, promedio))
         pass
 
     def btn_total_iva_on_click(self):
+        producto1 = float(self.txt_importe_1.get())
+        producto2 = float(self.txt_importe_2.get())
+        producto3 = float(self.txt_importe_3.get())
+
+        total = producto1 + producto2 + producto3
+
+        iva = ((21/100)*total)
+
+        total_final = total + iva
+
+        alert("Resultado", "La suma entre {0}, {1}, {2} nos da un total de: {3}, mas el 21% de IVA ({4}), nos daria: {5}".format(producto1, producto2, producto3, total, iva, total_final))
         pass      
     
 if __name__ == "__main__":
