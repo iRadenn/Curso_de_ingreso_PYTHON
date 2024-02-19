@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Ignacio
+apellido: Orellana
 ---
 Ejercicio: Match_04
 ---
@@ -38,6 +38,16 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
+        mes = self.combobox_mes.get()
+
+        match mes:
+            case "Febrero":
+                msj = "Este mes tiene 28 dias"
+            case "Abril"|"Junio"|"Septiembre"|"Noviembre":
+                msj = "Este mes tiene 30 dias"
+            case _ :
+                msj = "Este mes tiene 31 dias"
+        alert("", msj)
         pass
     
 if __name__ == "__main__":

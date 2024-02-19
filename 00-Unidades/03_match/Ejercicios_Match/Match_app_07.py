@@ -34,6 +34,19 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
+        destino = self.combobox_destino.get()
+
+        match destino :
+            case "Bariloche":
+                msj = "Se encuentra en el sur de Argentina"
+            case "Mar del plata":
+                msj = "Se encuentra en el este Argentina"
+            case "Cataratas":
+                msj = "Se encuentra en el norte Argentina"
+            case "Ushuaia":
+                msj = "Se encuentra en el oeste Argentina"
+
+        alert("", msj)
         pass
     
     

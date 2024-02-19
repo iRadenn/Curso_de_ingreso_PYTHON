@@ -46,31 +46,9 @@ class App(customtkinter.CTk):
         marca = self.combobox_marca.get()
         cantidad = int(self.combobox_cantidad.get())
         total = cantidad * 800
+        descuento = 0
 
-        if cantidad > 5 :
-            descuento_1 = total - (total * 0.5)
-            alert ("Resultado","{0}".format(descuento_1))
-        elif cantidad == 5 and marca == "ArgentinaLuz":
-            descuento_2 = total - (total * 0.4)
-            alert ("Resultado","{0}".format(descuento_2))
-        elif cantidad == 5 :
-            descuento_3 = total - (total * 0.3)
-            alert ("Resultado","{0}".format(descuento_3))
-        elif cantidad == 4 and marca == "ArgentinaLuz" or marca == "FelipeLamparas" :
-            descuento_4 = total - (total * 0.25)
-            alert ("Resultado","{0}".format(descuento_4))
-        elif cantidad == 4 :
-            descuento_5 = total - (total * 0.2)
-            alert ("Resultado","{0}".format(descuento_5))
-        elif cantidad == 3 and marca == "ArgentinaLuz":
-            descuento_6 = total - (total * 0.15)
-            alert ("Resultado","{0}".format(descuento_6))
-        elif cantidad == 3 and marca == "FelipeLamparas":
-            descuento_7 = total - (total * 0.1)
-            alert ("Resultado","{0}".format(descuento_7))
-        elif cantidad == 3 :
-            descuento_8 = total - (total * 0.05)
-            alert ("Resultado","{0}".format(descuento_8))
+        
         pass
         
     

@@ -57,6 +57,22 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
+        destino = self.combobox_destino.get()
+        estaciones = self.combobox_estaciones.get()
+
+        total = 15000
+        
+        match estaciones :
+            case "Invierno" :
+                match destino:
+                    case "Bariloche":
+                        aumento = 20
+                    case "Cataratas" | "Cordoba":
+                        descuento = 10
+                    case "Mar del plata":
+                        descuento = 20
+                
+        
         pass
             
     
