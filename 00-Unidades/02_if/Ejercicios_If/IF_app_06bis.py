@@ -49,9 +49,7 @@ class App(customtkinter.CTk):
             alert("Resultado", "Es Alero")
         else :
             alert("Resultado", "Es Pivot")
-        pass
-
-
+            
         pass
 
         

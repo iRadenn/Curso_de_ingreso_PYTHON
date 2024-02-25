@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Ignacio
+apellido: Orellana
 ---
 Ejercicio: while_03
 ---
@@ -29,6 +29,16 @@ class App(customtkinter.CTk):
         
     
     def btn_pedir_clave_on_click(self):
+
+        #Prompt se utiliza para poder ingresar datos mediante una ventana de texto
+        clave = prompt("", "Ingrese la clave")
+        clave = str(clave)
+        #El simbolo "!=" se utiliza para devolver TRUE si es q ambos operandos no son iguales, en este caso al no ser igual la clave, vuelve a solicitar la misma
+        while clave != "utn750":
+            clave = prompt("", "Ingrese la clave nuevamente")
+            clave = str(clave)
+        
+        alert("", "La clave se ingreso correctamente")
         pass
     
     

@@ -27,7 +27,15 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        num = int(prompt("", "Ingrese un numero: "))
+        contador = 0
+        for i in range(0, num):
+            i += 1
+            if num % i == 0 :
+                contador +=1
+                print(i)
+        print("Cantidad:{0}".format(contador))
+    
         
     
 if __name__ == "__main__":

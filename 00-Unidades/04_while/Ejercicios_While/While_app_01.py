@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Ignacio
+apellido: Orellana
 ---
 Ejercicio: while_01
 ---
@@ -29,6 +29,11 @@ class App(customtkinter.CTk):
         
     
     def btn_mostrar_iteracion_on_click(self):
+        #Este bucle escribira mediante ALERT numeros del 1 hasta el rango solicitado, en este caso 10
+        num = 1
+        while num < 11:
+            alert("", num)
+            num += 1
         pass
     
     

@@ -6,8 +6,8 @@ import customtkinter
 
 
 '''
-nombre:
-apellido:
+nombre: Ignacio
+apellido: Orellana
 ---
 Ejercicio: Match_09
 ---
@@ -60,19 +60,35 @@ class App(customtkinter.CTk):
         destino = self.combobox_destino.get()
         estaciones = self.combobox_estaciones.get()
 
-        total = 15000
-        
+        tarifa = 15000
+
+        desc_aum = 0
+
         match estaciones :
             case "Invierno" :
                 match destino:
                     case "Bariloche":
-                        aumento = 20
+                        desc_aum = 1.20
                     case "Cataratas" | "Cordoba":
-                        descuento = 10
+                        desc_aum = 0.90
                     case "Mar del plata":
-                        descuento = 20
+                        desc_aum = 0.80
+            case "Verano":
+                match destino:
+                    case "Bariloche":
+                        desc_aum = 0.80
+                    case "Cataratas" | "Cordoba":
+                        desc_aum = 1.20
+                    case "Mar del plata":
+                        desc_aum = 1.20
+            case "Primavera" | "Otoño":
+                match destino:
+                    case "Bariloche" | "Cataratas" | "Mar del plata":
+                        desc_aum = 1.10
                 
-        
+        tarifa_total = tarifa * desc_aum
+
+        alert("","{0}".format(tarifa_total))
         pass
             
     
